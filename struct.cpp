@@ -15,8 +15,8 @@ int main() {
     one g;
     g.a = 4;
 
-    std::cout << g.a << '\n';
-    std::cout << g.b << '\n'; // will print an empty space
+    std::cout << g.a << std::endl;
+    std::cout << "g.b is: " << g.b << std::endl; // will print an empty space
 
     std::cout << "\ntrying something else\n";
 

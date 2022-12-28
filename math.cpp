@@ -16,6 +16,7 @@ int main() {
     std::cout << log(10) << '\n';
 
     std::cout << fabs(-64.2) << '\n';
+    std::cout << abs(-64.2) << '\n';
 
 }
 

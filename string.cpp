@@ -40,7 +40,12 @@ int main() {
     std::cout << "\n\nlets try again gimme it: ";
 
     cin.ignore(); // needs to be called so that the trailing character '\n' from previous input does not make getline discard the input we want below
-    getline(cin, user);
+    getline(std::cin, user);
+
+    std::cout << "this time you actually gave me: " << user << endl;
+
+    std::cout << "\n\nlet's try again and replace user with something now: ";
+    getline(std::cin, user);
 
     std::cout << "this time you actually gave me: " << user << endl;
 
