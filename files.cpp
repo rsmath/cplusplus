@@ -11,7 +11,7 @@ int main() {
 
     std::ofstream file("file.txt");
 
-    file << "This is going to be the text there.\n";
+    file << "This is going to be the text there.\nLet's try something else" << std::endl;
 
     for (int i = 0; i < 10; i++) {
         file << "I am on iteration " << i << ",\n";

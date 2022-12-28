@@ -16,6 +16,6 @@ whatif:
             goto whatif;
         }
         std::cout << a << "\n";
-        a -= 1;
+        --a;
     }
 }

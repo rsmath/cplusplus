@@ -7,7 +7,7 @@ class A {
         int a;
     private:
         int b;
-    int x; // by defauly is private
+    int x; // by default is private
 
     public:
        void setb(int a) {

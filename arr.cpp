@@ -1,5 +1,6 @@
 #include<iostream>
-#include<iostream>
+
+using std::string;
 
 /* void printarr(int arr[]) { */
 
@@ -28,6 +29,9 @@ int main() {
     }
     std::cout << '\n';
 
+    string temp = "hello";
+    std::cout << "Just testing length of string: " << temp.length() << std::endl;
+
     // sizeof, both approaches work
     std::cout << "sizeof array: " << sizeof(arr) / sizeof(arr[0]) << '\n';
     std::cout << "using int instead of first element\n";
@@ -51,7 +55,7 @@ int main() {
         for (int j = 0; j < 2; j++) {
             std::cout << a[i][j] << " ";
         }
-        std::cout << '\n';
+        std::cout << std::endl;
     }
 
 }

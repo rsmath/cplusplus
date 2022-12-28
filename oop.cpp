@@ -57,7 +57,7 @@ int main() {
     ob.print("wassup");
     ob.another();
     ob.another("random string");
-    // ob.print('b'); will give error because char isn't converted to string
+    /* ob.print('b'); // will give error because char isn't converted to string */
     
     HJ a;
     HJ b(4, "Ram");
