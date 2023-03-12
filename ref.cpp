@@ -1,6 +1,24 @@
 #include<iostream>
 
 using std::string; // so that we do not need to write std::string
+            
+void another(int b[]) {
+    /* *b = 1; */
+    std::cout << b[1] << std::endl;
+    std::cout << "Input to another function is: " << b << std::endl;
+    std::cout << "Input to another function is: " << *b << std::endl;
+    std::cout << "Input to another function is: " << &b << std::endl;
+    std::cout << "Input to another function is: " << *(&b) << std::endl;
+    std::cout << "Input to another function is: " << **(&b) << std::endl;
+    std::cout << std::endl;
+}
+
+void okay(int& a) {
+    a = 10;
+    std::cout << "Input to okay function is: " << a << std::endl;
+    /* std::cout << "Input to okay function is: " << *a << std::endl; */ // does not work
+    std::cout << "Input to okay function is: " << &a << std::endl;
+}
 
 int main() {
 
@@ -8,8 +26,25 @@ int main() {
 
     int a = 10;
 
-    std::cout << a << '\n';
-    std::cout << &a << '\n';
+    /* std::cout << a << '\n'; */
+    /* std::cout << &a << '\n'; */
+
+    int arr[] = {1234234, 2, 3};
+    int* arrr = arr;
+    arrr[2] = 123123;
+    std::cout << arr << std::endl;
+    for (int i = 0; i < sizeof(arr) / sizeof(arr[0]); i++) {
+        std::cout << arr[i] << ", ";
+    }
+    std::cout << std::endl;
+    for (int i = 0; i < sizeof(arr) / sizeof(arr[0]); i++) {
+        std::cout << arrr[i] << ", ";
+    }
+    std::cout << std::endl;
+
+    another(arr);
+    /* another(&arr); */
+    okay(*arr);
 
     std::cout << "setting b ref to int a\n";
 
@@ -37,7 +72,6 @@ int main() {
     
     std::cout << "string: " << name << std::endl;
     std::cout << "Pointer: " << ptr << std::endl;
-
     std::cout << "Pointer's pointer: " << ptr1 << std::endl;
     std::cout << "Pointer's pointer's pointer: " << ptr2 << std::endl;
 

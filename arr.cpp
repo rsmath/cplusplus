@@ -2,9 +2,9 @@
 
 using std::string;
 
-/* void printarr(int arr[]) { */
+/* void printarr(string &arr) { */
 
-/*     /1* for (int i = 0; i < arr.length; i++) { *1/ */
+/*     for (int i = 0; i < arr.length; i++) { */
 /*         std::cout << arr[i] << " "; */
 /*     } */
 /* } */
@@ -45,18 +45,29 @@ int main() {
     std::string t[] = {"Asdf", "ss"};
     std::cout << "Array having 2 given elements.\n";
     std::cout << "size of string array: " << sizeof(t) / sizeof(t[0]) << '\n';
-    std::cout << "size of string array: " << sizeof(t) / sizeof(std::string) << '\n';
+    std::cout << "size of string array: " << sizeof(t) / sizeof(std::string) << "\n\n\n\n";
 
     // std::cout << ("\n"*4); //can't do this lol
 
-    const int a[2][2] = {{1, 2}, {3, 4}};
+    int a[3] = {1, 2, 123123};
 
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 2; j++) {
-            std::cout << a[i][j] << " ";
-        }
-        std::cout << std::endl;
+    std::cout << a << std::endl;
+    std::cout << &a[0] << std::endl;
+    std::cout << &a[1] << std::endl;
+    std::cout << &a[2] << std::endl;
+    /* printarr(t); */
+
+    for (int i = 0; i < 3; i++) {
+        /* std::cout << a[i] << " "; */
+        std::cout << sizeof(i) << std::endl;
+        /* std::cout << (a + i) << " "; */
     }
+    std::cout << std::endl;
+    for (int i = 0; i < 3; i++) {
+        /* std::cout << a[i] << " "; */
+        std::cout << *(a + i) << " ";
+    }
+    std::cout << std::endl;
 
 }
 
